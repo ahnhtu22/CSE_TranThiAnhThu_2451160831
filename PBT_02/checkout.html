@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Thanh toán đơn hàng</title>
+</head>
+<body>
+    <h1>Hoàn tất Đặt hàng</h1>
+    
+    <form action="#" method="POST" oninput="totalAmount.value='35.000.000đ'">
+        <h2>1. Giỏ hàng của bạn</h2>
+        <table border="1" width="100%" style="border-collapse: collapse; text-align: center;">
+            <thead>
+                <tr>
+                    <th>STT</th>
+                    <th>Sản phẩm</th>
+                    <th>Đơn giá</th>
+                    <th>Số lượng</th>
+                    <th>Thành tiền</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>Điện thoại iPhone 16</td>
+                    <td>20.000.000đ</td>
+                    <td>1</td>
+                    <td>20.000.000đ</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Ốp lưng silicon</td>
+                    <td>500.000đ</td>
+                    <td>2</td>
+                    <td>1.000.000đ</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>Tai nghe AirPods</td>
+                    <td>4.500.000đ</td>
+                    <td>1</td>
+                    <td>4.500.000đ</td>
+                </tr>
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td colspan="4" style="text-align: right;"><strong>Tổng cộng:</strong></td>
+                    <td><output name="totalAmount" for="qty1 qty2 qty3">25.500.000đ</output></td>
+                </tr>
+            </tfoot>
+        </table>
+
+        <p>Tiến trình hạng thành viên: <progress value="70" max="100"></progress> 70% tới hạng Vàng</p>
+
+        <label for="add_product">Tìm mua thêm phụ kiện:</label>
+        <input list="products" id="add_product" name="add_product" placeholder="Nhập tên phụ kiện...">
+        <datalist id="products">
+            <option value="Sạc nhanh 20W">
+            <option value="Sạc dự phòng 10000mAh">
+            <option value="Cáp Type-C">
+        </datalist><br><br>
+
+        <h2>2. Phương thức thanh toán</h2>
+        <input type="radio" id="pay_cod" name="payment" value="cod" checked>
+        <label for="pay_cod">Thanh toán khi nhận hàng (COD)</label><br>
+        
+        <input type="radio" id="pay_bank" name="payment" value="bank">
+        <label for="pay_bank">Chuyển khoản ngân hàng</label><br>
+        
+        <input type="radio" id="pay_wallet" name="payment" value="wallet">
+        <label for="pay_wallet">Ví điện tử (Momo, ZaloPay)</label><br><br>
+
+        <label for="discount">Mã giảm giá:</label>
+        <input type="text" id="discount" name="discount" pattern="^SALE[0-9]{4}$" placeholder="Vd: SALE2026"><br><br>
+
+        <label for="note">Ghi chú đơn hàng:</label><br>
+        <textarea id="note" name="note" rows="4" cols="50" placeholder="Giao ngoài giờ hành chính..."></textarea>
+
+        <h2>3. Thông tin giao hàng</h2>
+        <label for="delivery_date">Ngày giao hàng mong muốn:</label>
+        <input type="date" id="delivery_date" name="delivery_date" min="2026-04-29"><br><br>
+
+        <label for="time_frame">Khung giờ nhận hàng:</label>
+        <select id="time_frame" name="time_frame">
+            <option value="morning">Sáng (8h - 12h)</option>
+            <option value="afternoon">Chiều (14h - 18h)</option>
+            <option value="evening">Tối (18h - 21h)</option>
+        </select><br><br>
+
+        <label for="delivery_speed">Tốc độ giao hàng mong muốn (1-7 ngày):</label>
+        <input type="range" id="delivery_speed" name="delivery_speed" min="1" max="7" step="1" value="3"><br><br>
+
+        <button type="submit" aria-label="Xác nhận đặt hàng">Xác nhận đặt hàng</button>
+    </form>
+</body>
+</html>
