@@ -1,0 +1,31 @@
+/* Xếp từ specificity thấp đến cao */
+
+/* 1. (0,0,1) */
+p { color: grey; }                          
+
+/* 2. (0,1,0) */
+.text { color: yellow; }                     
+
+/* 3. (0,1,0) - Thắng .text vì viết sau */
+.highlight { color: orange; }                
+
+/* 4. (0,1,1) */
+p.text { color: pink; }                      
+
+/* 5. (0,1,1) - Thắng p.text vì viết sau */
+p.highlight { color: purple; }               
+
+/* 6. (0,2,0) */
+.text.highlight { color: brown; }            
+
+/* 7. (0,2,1) */
+p.text.highlight { color: cyan; }            
+
+/* 8. (1,0,0) */
+#demo { color: blue; }                       
+
+/* 9. (1,0,1) */
+p#demo { color: red; }                       
+
+/* 10. (1,2,1) -> Element sẽ có màu này */
+p#demo.text.highlight { color: green; }
