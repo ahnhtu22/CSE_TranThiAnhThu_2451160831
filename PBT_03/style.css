@@ -1,0 +1,71 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    color: #333;
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* Header & Descendant Selector */
+#main-header {
+    background: linear-gradient(to right, #4facfe 0%, #00f2fe 100%);
+    color: white;
+    padding: 20px;
+}
+
+/* Nav links & Pseudo-classes */
+.main-nav a {
+    color: #fff;
+    text-decoration: none;
+    margin-right: 15px;
+    font-weight: bold;
+}
+
+.main-nav a:hover {
+    color: #ffeb3b;
+    text-decoration: underline;
+}
+
+.main-nav a.active {
+    color: #ffeb3b;
+    border-bottom: 2px solid #ffeb3b;
+}
+
+/* Table styling */
+.skills-table {
+    width: 80%;
+    margin: 20px auto;
+    border-collapse: collapse;
+}
+
+.skills-table th, .skills-table td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: left;
+}
+
+.skills-table th {
+    background-color: #2c3e50;
+    color: white;
+}
+
+.skills-table tr:nth-child(even) {
+    background-color: #eaf2f8;
+}
+
+.skills-table tr:hover {
+    background-color: #d6eaf8;
+}
+
+/* Footer */
+#main-footer {
+    background-color: #2c3e50;
+    color: #bdc3c7;
+    text-align: center;
+    padding: 15px 0;
+    margin-top: 40px;
+}
