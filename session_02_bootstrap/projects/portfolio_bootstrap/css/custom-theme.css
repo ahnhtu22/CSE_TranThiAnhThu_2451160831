@@ -1,0 +1,56 @@
+/* css/custom-theme.css */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+/* 1. Reset màu toàn bộ trang sang Dark Mode */
+:root {
+    --bs-body-bg: #000000;      /* Nền đen tuyền */
+    --bs-body-color: #ffffff;   /* Chữ trắng */
+    --bs-body-font-family: 'Inter', sans-serif;
+}
+
+/* Kích hoạt trượt trang mượt mà khi bấm menu */
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 80px; /* Trừ hao chiều cao của navbar để không bị che khuất */
+}
+
+body {
+    background-color: var(--bs-body-bg);
+    color: var(--bs-body-color);
+}
+
+/* 2. Custom Navbar */
+.nav-link {
+    color: #a1a1aa !important; /* Màu xám nhạt cho menu */
+    transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+    color: #ffffff !important; /* Sáng lên khi trỏ chuột */
+}
+
+/* 3. Hiệu ứng Card "Sáng lên" khi trỏ chuột (Giống ảnh 2) */
+.project-card {
+    background-color: transparent !important;
+    border: 1px solid #27272a !important; /* Viền xám rất tối */
+    transition: all 0.3s ease;
+}
+
+.project-card:hover {
+    background-color: #18181b !important; /* Nền sáng lên thành xám đen */
+    border-color: #3f3f46 !important;     /* Viền sáng lên chút xíu */
+    cursor: pointer;
+}
+
+/* 4. Tinh chỉnh các section để phù hợp màu tối */
+section {
+    background-color: #000000 !important;
+}
+
+.text-dark {
+    color: #ffffff !important; /* Ép các chữ màu đen cũ thành trắng */
+}
+
+.text-secondary {
+    color: #a1a1aa !important; /* Xám dịu cho các đoạn text phụ */
+}
