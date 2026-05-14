@@ -1,0 +1,27 @@
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { background: #f8fafc; font-family: sans-serif; }
+
+/* Grid Layout Chính */
+.grid-container {
+    display: grid;
+    grid-template-columns: 200px 1fr 200px; /* 3 cột theo đề */
+    gap: 20px; padding: 20px; min-height: 100vh;
+}
+
+.header { grid-column: 1 / -1; background: #1e293b; color: white; padding: 2rem; text-align: center; }
+.hero { grid-column: 1 / -1; background: #3b82f6; color: white; padding: 4rem; text-align: center; }
+.sidebar { background: white; padding: 1rem; border-radius: 8px; border: 1px solid #e2e8f0; }
+.ads { background: #cbd5e1; padding: 1rem; text-align: center; display: flex; align-items: center; justify-content: center; }
+.footer { grid-column: 1 / -1; background: #0f172a; color: white; padding: 2rem; text-align: center; }
+
+/* Main Content (Lưới con) */
+.main-content {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Lưới con 3 cột */
+    gap: 20px;
+}
+
+.product-item {
+    background: white; height: 200px; border-radius: 8px; border: 1px solid #e2e8f0;
+    display: flex; align-items: center; justify-content: center;
+}
