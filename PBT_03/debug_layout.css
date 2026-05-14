@@ -1,0 +1,36 @@
+.container {
+    width: 960px;
+    margin: 0 auto;
+    background-color: #f1c40f;
+    overflow: auto;
+}
+
+/* Base style (Bị vỡ nếu dùng bình thường) */
+.sidebar {
+    width: 300px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    float: left;
+    background: #e74c3c;
+}
+.content {
+    width: 660px;
+    padding: 30px;
+    border: 1px solid #ccc;
+    float: left;
+    background: #3498db;
+}
+
+/* FIX 1: Dùng border-box */
+.container-fix1 .sidebar, 
+.container-fix1 .content {
+    box-sizing: border-box;
+}
+
+/* FIX 2: Trừ hao bằng tay (nếu không dùng border-box) */
+.sidebar-fix2 {
+    width: 258px; /* 300 - 40 - 2 */
+}
+.content-fix2 {
+    width: 598px; /* 660 - 60 - 2 */
+}

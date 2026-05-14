@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Debug Layout</title>
+    <link rel="stylesheet" href="debug_layout.css">
+</head>
+<body>
+    <h2>Cách 1: Thêm border-box</h2>
+    <div class="container container-fix1">
+        <div class="sidebar">Sidebar</div>
+        <div class="content">Content</div>
+    </div>
+    <div style="clear: both; margin-bottom: 30px;"></div>
+
+    <h2>Cách 2: Tính toán lại Width (Không dùng border-box)</h2>
+    <div class="container">
+        <div class="sidebar sidebar-fix2">Sidebar</div>
+        <div class="content content-fix2">Content</div>
+    </div>
+</body>
+</html>
