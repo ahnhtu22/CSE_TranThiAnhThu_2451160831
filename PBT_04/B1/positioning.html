@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Positioning Layout</title>
+    <link rel="stylesheet" href="positioning.css">
+</head>
+<body>
+    <header class="fixed-header">
+        <div class="logo">MyStore</div>
+        <nav>Menu</nav>
+    </header>
+
+    <div class="layout-container">
+        <aside class="sticky-sidebar">
+            <h3>Danh mục</h3>
+            <ul><li>Áo thun</li><li>Quần Jean</li><li>Phụ kiện</li></ul>
+        </aside>
+
+        <main class="content">
+            <div class="product-card">
+                <span class="badge-hot">HOT</span>
+                <img src="../img/b1.jpg" alt="Product">
+                <h3>Sản phẩm 1</h3>
+                <p>Mô tả sản phẩm rất tuyệt vời.</p>
+            </div>
+            <div style="height: 1000px; padding: 20px;">Cuộn xuống để xem hiệu ứng sticky và fixed...</div>
+        </main>
+    </div>
+
+    <button class="scroll-top">↑</button>
+</body>
+</html>
