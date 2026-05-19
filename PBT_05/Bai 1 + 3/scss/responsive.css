@@ -1,0 +1,144 @@
+@charset "UTF-8";
+/* ==========================================================================
+   1. ĐỊNH NGHĨA BIẾN (VARIABLES) TRỰC TIẾP
+   ========================================================================== */
+/* ==========================================================================
+   2. MIXINS
+   ========================================================================== */
+/* ==========================================================================
+   3. BẮT ĐẦU CSS SKELETON & STYLE
+   ========================================================================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", Geneva, Verdana, sans-serif;
+  background-color: #f9f9f9;
+  color: #333333;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* HEADER */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px;
+  background-color: #a8e6cf;
+}
+.header .nav-menu {
+  display: none;
+}
+.header .hamburger {
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+}
+@media (min-width: 768px) {
+  .header .hamburger {
+    display: none;
+  }
+  .header .nav-menu {
+    display: block;
+  }
+  .header .nav-menu ul {
+    display: flex;
+    list-style: none;
+    gap: 16px;
+  }
+  .header .nav-menu a {
+    text-decoration: none;
+    color: #333333;
+    font-weight: bold;
+  }
+}
+
+/* MAIN LAYOUT */
+.main-layout {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+  padding: 16px;
+}
+.main-layout .sidebar, .main-layout .ads-bar {
+  display: none;
+}
+@media (min-width: 768px) {
+  .main-layout .sidebar {
+    display: block;
+    background: #fff;
+    padding: 16px;
+  }
+}
+@media (min-width: 1024px) {
+  .main-layout {
+    grid-template-columns: 250px 1fr 200px;
+  }
+  .main-layout .ads-bar {
+    display: block;
+    background: #fff;
+    padding: 16px;
+  }
+}
+
+/* GRID SẢN PHẨM */
+.product-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+}
+@media (min-width: 768px) {
+  .product-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (min-width: 1024px) {
+  .product-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+/* CARD PRODUCT */
+.card {
+  background: #fff;
+  padding: 16px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+.card .card-title {
+  margin-top: 8px;
+  font-size: 1.2rem;
+}
+.card p {
+  color: #666;
+  margin-bottom: 16px;
+}
+.card .btn {
+  width: 100%;
+  padding: 10px;
+  background-color: #dcedc1;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15);
+}
+
+.footer {
+  text-align: center;
+  padding: 32px;
+  background: #ddd;
+  margin-top: 32px;
+}/*# sourceMappingURL=responsive.css.map */
