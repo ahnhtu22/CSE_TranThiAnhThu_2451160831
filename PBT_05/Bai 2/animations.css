@@ -1,0 +1,54 @@
+/* 1. Fade-in scroll & 2. Card Hover */
+.anim-card {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeIn 1s forwards ease-out;
+    transition: all 0.3s ease;
+    width: 250px;
+    padding: 15px; border: 1px solid #ddd;
+}
+.anim-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
+
+@keyframes fadeIn {
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* 3. Button Hover */
+.anim-btn {
+    padding: 10px 20px;
+    background-color: #a8e6cf;
+    color: #333; border: none; cursor: pointer;
+    transition: background-color 0.3s, color 0.3s, transform 0.3s;
+}
+.anim-btn:hover {
+    background-color: #333; color: #a8e6cf;
+    transform: scale(1.05);
+}
+
+/* 4. Image Zoom */
+.img-container {
+    width: 200px; height: 200px; overflow: hidden;
+}
+.img-container img {
+    width: 100%; height: 100%; object-fit: cover;
+    transition: transform 0.4s ease;
+}
+.img-container:hover img {
+    transform: scale(1.1);
+}
+
+/* 5. Loading Spinner */
+.spinner {
+    width: 40px; height: 40px;
+    border: 4px solid #f3f3f3;
+    border-top: 4px solid #e6a8d4;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
