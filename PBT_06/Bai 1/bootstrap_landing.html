@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-Commerce Landing Page</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light shadow-sm">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="#">ShopBrand</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto align-items-center">
+                    <li class="nav-item"><a class="nav-link active" href="#">Trang chủ</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Sản phẩm</a></li>
+                    <li class="nav-item">
+                        <form class="d-flex mx-3">
+                            <input class="form-control me-2" type="search" placeholder="Tìm kiếm...">
+                            <button class="btn btn-outline-success" type="submit">Tìm</button>
+                        </form>
+                    </li>
+                    <li class="nav-item"><a class="nav-link" href="#">🛒 Giỏ hàng (0)</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div id="heroCarousel" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active bg-dark text-white text-center py-5" style="height: 400px;">
+                <div class="container mt-5">
+                    <h1 class="display-4 fw-bold">Bộ Sưu Tập Mùa Hè</h1>
+                    <p class="lead">Khám phá những xu hướng mới nhất 2026.</p>
+                    <a href="#" class="btn btn-primary btn-lg mt-3">Mua Ngay</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container my-5">
+        <h2 class="text-center mb-4">Sản Phẩm Nổi Bật</h2>
+        <div class="row g-4">
+            <div class="col-12 col-md-6 col-lg-3">
+                <div class="card h-100 position-relative shadow-sm">
+                    <span class="badge bg-danger position-absolute top-0 end-0 m-2">Sale 30%</span>
+                    <img src="ao.jpg" class="card-img-top" alt="Product">
+                    <div class="card-body d-flex flex-column">
+                        <h5 class="card-title">Áo Thun Basic</h5>
+                        <p class="card-text text-muted">Chất liệu cotton thoáng mát.</p>
+                        <h6 class="text-danger fw-bold mb-3">250.000đ</h6>
+                        <button class="btn btn-outline-primary mt-auto" data-bs-toggle="modal" data-bs-target="#productModal">Xem nhanh</button>
+                    </div>
+                </div>
+            </div>
+            </div>
+    </div>
+
+    <div class="modal fade" id="productModal" tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Chi tiết sản phẩm</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <p>Thông tin chi tiết về sản phẩm sẽ hiển thị ở đây...</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Đóng</button>
+                    <button type="button" class="btn btn-primary">Thêm vào giỏ</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="bg-dark text-light py-4 mt-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-md-3 mb-3"><h5>Về Chúng Tôi</h5><p>Shop thời trang uy tín.</p></div>
+                <div class="col-12 col-md-3 mb-3"><h5>Chính Sách</h5><p>Đổi trả trong 7 ngày.</p></div>
+                <div class="col-12 col-md-3 mb-3"><h5>Hỗ Trợ</h5><p>Hotline: 1900 xxxx</p></div>
+                <div class="col-12 col-md-3 mb-3"><h5>Theo Dõi</h5><p>Facebook | Instagram</p></div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
