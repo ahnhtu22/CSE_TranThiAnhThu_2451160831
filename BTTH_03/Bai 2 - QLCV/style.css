@@ -1,0 +1,213 @@
+/* --- CÀI ĐẶT CƠ BẢN --- */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Arial, sans-serif;
+}
+
+body {
+    background-color: #fdfdfd; /* Màu nền trắng xám nhẹ */
+    padding: 20px;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto; /* Căn giữa màn hình */
+}
+
+h1 {
+    text-align: center;
+    color: #d32f2f; /* Đỏ chủ đạo */
+    margin-bottom: 25px;
+    text-transform: uppercase;
+}
+
+/* --- KHU VỰC THỐNG KÊ --- */
+.thong-ke {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    gap: 15px;
+}
+
+.o-thong-ke {
+    background-color: white;
+    border: 2px solid #d32f2f;
+    border-radius: 10px; /* Bo góc tròn 10px */
+    padding: 15px;
+    flex: 1; /* Chia đều chiều rộng cho 3 ô */
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(211, 47, 47, 0.05);
+}
+
+.o-thong-ke p {
+    color: #555;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.o-thong-ke h3 {
+    font-size: 26px;
+}
+
+/* --- THÔNG BÁO --- */
+.thong-bao {
+    background-color: #d4edd9;
+    color: #155724;
+    padding: 12px;
+    border-radius: 10px;
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 15px;
+    display: none; /* Mặc định ẩn, khi nào có thông báo JS mới bật lên */
+}
+
+/* --- CÁC NÚT BẤM --- */
+button {
+    cursor: pointer;
+    border-radius: 10px; /* Bo góc 10px */
+    border: none;
+    font-weight: bold;
+    padding: 10px 18px;
+    transition: 0.2s; /* Hiệu ứng mượt khi di chuột */
+}
+
+.thanh-cong-cu {
+    text-align: right;
+    margin-bottom: 15px;
+}
+
+.btn-do {
+    background-color: #d32f2f;
+    color: white;
+}
+.btn-do:hover { background-color: #b71c1c; }
+
+.btn-xam {
+    background-color: #e0e0e0;
+    color: #333;
+}
+.btn-xam:hover { background-color: #ccc; }
+
+/* --- THẺ CÔNG VIỆC (TASK CARD) --- */
+.the-cong-viec {
+    background-color: white;
+    border-radius: 10px;
+    padding: 15px 20px;
+    margin-bottom: 15px;
+    border-left: 6px solid #d32f2f; /* Vạch đỏ bên trái */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
+.noi-dung-cv {
+    flex-grow: 1;
+    padding: 0 15px;
+}
+
+.noi-dung-cv h3 {
+    font-size: 18px;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+.noi-dung-cv p {
+    color: #666;
+    font-size: 14px;
+    margin-bottom: 5px;
+}
+
+.noi-dung-cv small {
+    color: #888;
+    font-weight: bold;
+}
+
+/* Nút checkbox to ra 1 chút */
+.o-check {
+    width: 22px;
+    height: 22px;
+    cursor: pointer;
+}
+
+/* Khi công việc đã hoàn thành, đổi vạch sang xanh và gạch ngang chữ */
+.the-cong-viec.da-xong {
+    border-left-color: #28a745;
+    background-color: #f9f9f9;
+    opacity: 0.8;
+}
+.the-cong-viec.da-xong h3 {
+    text-decoration: line-through;
+    color: #888;
+}
+
+.nhom-nut-hanh-dong button {
+    padding: 6px 12px;
+    border: 1px solid #ccc;
+    background-color: white;
+    color: #333;
+}
+.nhom-nut-hanh-dong button:hover {
+    background-color: #eee;
+}
+
+/* --- POPUP MODAL (FORM) --- */
+.modal {
+    position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background-color: rgba(0,0,0,0.5);
+    display: none; /* Ẩn đi chờ JS gọi */
+    justify-content: center;
+    align-items: center;
+}
+
+/* Class này được JS chèn vào để làm Modal hiện lên */
+.modal.hien-thi {
+    display: flex;
+}
+
+.modal-noi-dung {
+    background-color: white;
+    width: 100%;
+    max-width: 500px;
+    padding: 25px;
+    border-radius: 10px; /* Bo góc 10px */
+    border-top: 8px solid #d32f2f;
+    position: relative; /* Gốc tọa độ cho nút X */
+}
+
+/* Nút X ở góc trên bên phải */
+.btn-x {
+    position: absolute;
+    top: 15px; right: 20px;
+    background: transparent;
+    font-size: 28px;
+    color: #999;
+    padding: 0;
+}
+.btn-x:hover { color: #d32f2f; }
+
+.modal-noi-dung h2 {
+    color: #d32f2f;
+    margin-bottom: 20px;
+}
+
+.nhom-nhap { margin-bottom: 15px; }
+.nhom-nhap label { display: block; margin-bottom: 5px; font-weight: bold; }
+.nhom-nhap input, .nhom-nhap textarea, .nhom-nhap select {
+    width: 100%;
+    padding: 10px;
+    border-radius: 10px; /* Bo góc 10px */
+    border: 1px solid #ccc;
+}
+
+.modal-chan {
+    display: flex;
+    justify-content: flex-end; /* Đẩy sát lề phải */
+    gap: 12px;
+    margin-top: 25px;
+    border-top: 1px solid #eee;
+    padding-top: 15px;
+}
