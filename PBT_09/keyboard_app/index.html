@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Keyboard App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div style="text-align: center; margin-top: 20vh;">
+        <h1>Press <code>Ctrl + K</code> to open Command Palette</h1>
+        <p>Use Left/Right arrows or keys 1-9 to simulate Gallery navigation.</p>
+    </div>
+
+    <div id="commandPalette" class="palette-overlay">
+        <div class="palette-box">
+            <input type="text" id="commandSearch" placeholder="Search commands...">
+            <ul id="commandList">
+                <li>Toggle Dark Mode</li>
+                <li>Go to Settings</li>
+                <li>Log out</li>
+            </ul>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
