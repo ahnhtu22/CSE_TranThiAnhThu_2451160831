@@ -27,7 +27,7 @@ passwordInput.addEventListener('input', (e) => {
     if (strength === 3) strengthBar.classList.add('strong'); 
 });
 
-// Giả lập check form valid (bạn sẽ cần bổ sung thêm logic cho email/tên/confirm pass)
+// Giả lập check form valid 
 form.addEventListener('input', () => {
     // Nếu tất cả field hợp lệ
     // submitBtn.disabled = false;
